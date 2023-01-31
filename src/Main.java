@@ -1,9 +1,18 @@
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
 
     private static final int[] cases = {100, 90, 80, 70, 60, 50, 40, 30, 20, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введи выражение = ");
+        String input = scanner.nextLine();
+        Main.calc(input);
+        scanner.close();
+    }
 
     public static void calc(String input) throws IOException {
         input = input.replaceAll(" ", "");
